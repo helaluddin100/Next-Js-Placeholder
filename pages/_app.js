@@ -1,5 +1,10 @@
-import "../styles/globals.css";
-import "../styles/App.css";
+import "../styles/css/fontawesome/css/all.css";
+
+import "../styles/css/bootstrap.min.css";
+import "../styles/css/loder.css";
+import "../styles/css/slider.css";
+import "../styles/css/font.css";
+import "../styles/css/style.css";
 
 import { Fragment, useEffect } from "react";
 import { useRouter } from "next/router";
