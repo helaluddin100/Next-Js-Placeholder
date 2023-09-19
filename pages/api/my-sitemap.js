@@ -1,7 +1,8 @@
 const { SitemapStream, streamToPromise } = require("sitemap");
 const { Readable } = require("stream");
 
-export default async (req, res) => {
+// Give your function a name
+const generateSitemap = async (req, res) => {
   // An array with your links
   const links = [
     { url: "/", changefreq: "daily", priority: 0.9 },
@@ -30,3 +31,6 @@ export default async (req, res) => {
 
   res.end(xmlString);
 };
+
+// Export the named function as the default export
+export default generateSitemap;

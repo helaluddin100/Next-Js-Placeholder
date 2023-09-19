@@ -159,7 +159,7 @@ function Home() {
           <div className="row">
             <div className="col-lg-7">
               <div className="about__text">
-                <h3>I'm Helal Uddin</h3>
+                <h3>I&lsquo;m Helal Uddin</h3>
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the
