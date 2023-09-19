@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import AppLayout from "../component/Layout/Layout";
-
+import Image from "next/image";
 import Head from "next/head";
 import Portfolio from "./component/portfolio";
 import Review from "./component/Review";
@@ -125,28 +125,25 @@ function Home() {
             <div className="col-lg-12">
               <ul className="resume__btn">
                 <li>
-                  <button
-                    className="cate__btn active"
-                    onclick="filter('about')"
-                  >
+                  <button className="cate__btn active">
                     <i className="fas fa-user"></i>
                     <span>about me</span>
                   </button>
                 </li>
                 <li>
-                  <button className="cate__btn" onclick="filter('exper__sec')">
+                  <button className="cate__btn">
                     <i className="fas fa-user-tie"></i>
                     <span>experience</span>
                   </button>
                 </li>
                 <li>
-                  <button className="cate__btn" onclick="filter('edu__sec')">
+                  <button className="cate__btn">
                     <i className="fas fa-user-graduate"></i>
                     <span>education</span>
                   </button>
                 </li>
                 <li>
-                  <button className="cate__btn" onclick="filter('refer__sec')">
+                  <button className="cate__btn">
                     <i className="fas fa-users"></i>
                     <span>reference</span>
                   </button>
