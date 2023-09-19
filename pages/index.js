@@ -86,8 +86,8 @@ function Home() {
                       distracted by the readable content of a page when looking
                       at its layout. The point of using Lorem Ipsum is that it
                       has a more-or-less normal distribution of letters, as
-                      opposed to using 'Content here, content here', making it
-                      look like readable English. Many desktop
+                      opposed to using &lsquo;Content here, content here&lsquo;,
+                      making it look like readable English. Many desktop
                     </p>
                   </div>
                   <div className="banner__btn duel__btn">
@@ -165,10 +165,10 @@ function Home() {
                 <h3>I'm Helal Uddin</h3>
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book.
+                  typesetting industry. Lorem Ipsum has been the
+                  industry&lsquo;s standard dummy text ever since the 1500s,
+                  when an unknown printer took a galley of type and scrambled it
+                  to make a type specimen book.
                 </p>
               </div>
               <div className="details">
@@ -442,7 +442,7 @@ function Home() {
                 <p>
                   my <span>services</span>
                 </p>
-                <h2>I'm very passionate under about this services</h2>
+                <h2>I&lsquo;m very passionate under about this services</h2>
               </div>
             </div>
           </div>
@@ -556,8 +556,8 @@ function Home() {
                 </h3>
                 <p>
                   Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s
+                  typesetting industry. Lorem Ipsum has been the
+                  industry&lsquo;s standard dummy text ever since the 1500s
                 </p>
               </div>
               <ul className="coding__list">
@@ -613,7 +613,7 @@ function Home() {
                 <p>
                   my <span>skills</span>
                 </p>
-                <h2>I'm Expert in this web software</h2>
+                <h2>I&lsquo;m Expert in this web software</h2>
               </div>
             </div>
           </div>
@@ -996,8 +996,8 @@ function Home() {
                   </div>
                   <div className="faq__ans">
                     <p>
-                      industry. Lorem Ipsum has been the industry's standard
-                      dummy text ever since the 1500s.
+                      industry. Lorem Ipsum has been the industry&lsquo;s
+                      standard dummy text ever since the 1500s.
                     </p>
                   </div>
                 </div>
@@ -1009,8 +1009,8 @@ function Home() {
                   </div>
                   <div className="faq__ans">
                     <p>
-                      industry. Lorem Ipsum has been the industry's standard
-                      dummy text ever since the 1500s.
+                      industry. Lorem Ipsum has been the industry&lsquo;s
+                      standard dummy text ever since the 1500s.
                     </p>
                   </div>
                 </div>
@@ -1022,8 +1022,8 @@ function Home() {
                   </div>
                   <div className="faq__ans">
                     <p>
-                      industry. Lorem Ipsum has been the industry's standard
-                      dummy text ever since the 1500s.
+                      industry. Lorem Ipsum has been the industry&lsquo;s
+                      standard dummy text ever since the 1500s.
                     </p>
                   </div>
                 </div>
@@ -1039,8 +1039,8 @@ function Home() {
                   </div>
                   <div className="faq__ans">
                     <p>
-                      industry. Lorem Ipsum has been the industry's standard
-                      dummy text ever since the 1500s.
+                      industry. Lorem Ipsum has been the industry&lsquo;s
+                      standard dummy text ever since the 1500s.
                     </p>
                   </div>
                 </div>
@@ -1052,8 +1052,8 @@ function Home() {
                   </div>
                   <div className="faq__ans">
                     <p>
-                      industry. Lorem Ipsum has been the industry's standard
-                      dummy text ever since the 1500s.
+                      industry. Lorem Ipsum has been the industry&lsquo;s
+                      standard dummy text ever since the 1500s.
                     </p>
                   </div>
                 </div>
@@ -1065,8 +1065,8 @@ function Home() {
                   </div>
                   <div className="faq__ans">
                     <p>
-                      industry. Lorem Ipsum has been the industry's standard
-                      dummy text ever since the 1500s.
+                      industry. Lorem Ipsum has been the industry&lsquo;s
+                      standard dummy text ever since the 1500s.
                     </p>
                   </div>
                 </div>
@@ -1078,8 +1078,8 @@ function Home() {
                   </div>
                   <div className="faq__ans">
                     <p>
-                      industry. Lorem Ipsum has been the industry's standard
-                      dummy text ever since the 1500s.
+                      industry. Lorem Ipsum has been the industry&lsquo;s
+                      standard dummy text ever since the 1500s.
                     </p>
                   </div>
                 </div>
