@@ -4,51 +4,51 @@ import Link from "next/link";
 function Footer() {
   return (
     <>
-      <section class="footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="footer__logo">
-                <a href="#" class="logo">
+      <section className="footer">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="footer__logo">
+                <a href="#" className="logo">
                   <img src="img/logo.png" alt="" />
                 </a>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-12">
-              <ul class="footer__social__icon">
+          <div className="row">
+            <div className="col-lg-12">
+              <ul className="footer__social__icon">
                 <li>
-                  <a class="icon social__icon" target="_blank" href="#">
-                    <i class="fab fa-facebook-f"></i>
+                  <a className="icon social__icon" target="_blank" href="#">
+                    <i className="fab fa-facebook-f"></i>
                   </a>
                 </li>
                 <li>
-                  <a class="icon social__icon" target="_blank" href="#">
-                    <i class="fab fa-twitter"></i>
+                  <a className="icon social__icon" target="_blank" href="#">
+                    <i className="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li>
-                  <a class="icon social__icon" target="_blank" href="#">
-                    <i class="fab fa-linkedin-in"></i>
+                  <a className="icon social__icon" target="_blank" href="#">
+                    <i className="fab fa-linkedin-in"></i>
                   </a>
                 </li>
                 <li>
-                  <a class="icon social__icon" target="_blank" href="#">
-                    <i class="fab fa-instagram"></i>
+                  <a className="icon social__icon" target="_blank" href="#">
+                    <i className="fab fa-instagram"></i>
                   </a>
                 </li>
                 <li>
-                  <a class="icon social__icon" target="_blank" href="#">
-                    <i class="fab fa-dribbble"></i>
+                  <a className="icon social__icon" target="_blank" href="#">
+                    <i className="fab fa-dribbble"></i>
                   </a>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-12">
-              <ul class="footer__text">
+          <div className="row">
+            <div className="col-lg-12">
+              <ul className="footer__text">
                 <li>
                   <h6>
                     &copy; Copyright <span>2021</span>

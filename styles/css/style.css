@@ -1628,7 +1628,7 @@ a.logo {
         PORTFOLIO CARD STYLE
 ======================================*/
 .port__card {
-  margin: 0px 25px;
+  /* margin: 0px 25px; */
   border-radius: 8px;
   position: relative;
 }

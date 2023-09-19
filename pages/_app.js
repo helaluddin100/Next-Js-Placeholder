@@ -1,5 +1,8 @@
 import "../styles/css/fontawesome/css/all.css";
-
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 import "../styles/css/bootstrap.min.css";
 import "../styles/css/loder.css";
 import "../styles/css/slider.css";
