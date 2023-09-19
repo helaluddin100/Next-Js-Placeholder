@@ -3755,7 +3755,7 @@ a.icon.icon-outline {
   width: 570px;
 }
 
-.faq__content {
+.faq-row {
   margin-bottom: 30px;
   background: #ffffff;
   border-radius: 5px;
@@ -3763,18 +3763,19 @@ a.icon.icon-outline {
   box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
   border-left: 3px solid var(--first-color);
   border-right: 3px solid var(--first-color);
+  padding: 5px 20px !important;
 }
 
-.faq__content:hover .faq__que button {
+.faq-row:hover .row-title .row-title-text {
   color: var(--first-color);
 }
 
-.faq__que {
+.row-title {
   cursor: pointer;
   padding: 18px 25px;
 }
 
-.faq__que button {
+.row-title .row-title-text {
   border: none;
   outline: none;
   background: none;
@@ -3787,6 +3788,8 @@ a.icon.icon-outline {
   -moz-transition: all linear 0.3s;
   -ms-transition: all linear 0.3s;
   -o-transition: all linear 0.3s;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .faq__ans p {

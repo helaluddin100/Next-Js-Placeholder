@@ -24,7 +24,7 @@ function Review() {
               <div className="client__slider">
                 <Swiper
                   modules={[Navigation, A11y]}
-                  spaceBetween={50}
+                  // spaceBetween={50}
                   slidesPerView={3}
                   navigation={{
                     prevEl: ".prev",

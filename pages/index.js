@@ -5,6 +5,8 @@ import Head from "next/head";
 import Portfolio from "./component/portfolio";
 import Review from "./component/Review";
 import Contact from "./component/Contact";
+import Counter from "./component/Counter";
+import FaqComponent from "./component/FaqComponent";
 function Home() {
   return (
     <>
@@ -831,55 +833,7 @@ function Home() {
       {/* ==================discussion end ============== */}
 
       {/* ============counter ============ */}
-      <section className="counter">
-        <div className="counter__bg">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-4 col-lg-4">
-                <div className="counter__card count-1">
-                  <img
-                    src="img/project-management.svg"
-                    className="counter__img"
-                    alt=""
-                  />
-                  <div className="counter__details">
-                    <h3>
-                      <span className="counter-number">362</span>+
-                    </h3>
-                    <p>Project completed</p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-4 col-lg-4">
-                <div className="counter__card count-2">
-                  <img
-                    src="img/handshake.svg"
-                    className="counter__img"
-                    alt=""
-                  />
-                  <div className="counter__details">
-                    <h3>
-                      <span className="counter-number">208</span>+
-                    </h3>
-                    <p>Satisfied Clients</p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-4 col-lg-4">
-                <div className="counter__card count-3">
-                  <img src="img/rating.svg" className="counter__img" alt="" />
-                  <div className="counter__details">
-                    <h3>
-                      <span className="counter-number">97</span>%
-                    </h3>
-                    <p>Possitive Feedback</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Counter />
 
       {/* ==============counter end ============== */}
 
@@ -970,122 +924,7 @@ function Home() {
       {/* =============package end ============== */}
 
       {/* =================faq============ */}
-      <section className="faq">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="section__heading faq__head">
-                <p>
-                  faq <span>question</span>
-                </p>
-                <h2>You have to find your question before we work together</h2>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-md-6 col-lg-6">
-              <div className="faq__main">
-                <div className="faq__content">
-                  <div className="faq__que">
-                    <button>
-                      Lorem Ipsum is simply dummy text of the printing?
-                    </button>
-                  </div>
-                  <div className="faq__ans">
-                    <p>
-                      industry. Lorem Ipsum has been the industry&lsquo;s
-                      standard dummy text ever since the 1500s.
-                    </p>
-                  </div>
-                </div>
-                <div className="faq__content">
-                  <div className="faq__que">
-                    <button>
-                      Lorem Ipsum is simply dummy text of the printing?
-                    </button>
-                  </div>
-                  <div className="faq__ans">
-                    <p>
-                      industry. Lorem Ipsum has been the industry&lsquo;s
-                      standard dummy text ever since the 1500s.
-                    </p>
-                  </div>
-                </div>
-                <div className="faq__content">
-                  <div className="faq__que">
-                    <button>
-                      Lorem Ipsum is simply dummy text of the printing?
-                    </button>
-                  </div>
-                  <div className="faq__ans">
-                    <p>
-                      industry. Lorem Ipsum has been the industry&lsquo;s
-                      standard dummy text ever since the 1500s.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-6">
-              <div className="faq__main">
-                <div className="faq__content">
-                  <div className="faq__que">
-                    <button>
-                      Lorem Ipsum is simply dummy text of the printing?
-                    </button>
-                  </div>
-                  <div className="faq__ans">
-                    <p>
-                      industry. Lorem Ipsum has been the industry&lsquo;s
-                      standard dummy text ever since the 1500s.
-                    </p>
-                  </div>
-                </div>
-                <div className="faq__content">
-                  <div className="faq__que">
-                    <button>
-                      Lorem Ipsum is simply dummy text of the printing?
-                    </button>
-                  </div>
-                  <div className="faq__ans">
-                    <p>
-                      industry. Lorem Ipsum has been the industry&lsquo;s
-                      standard dummy text ever since the 1500s.
-                    </p>
-                  </div>
-                </div>
-                <div className="faq__content">
-                  <div className="faq__que">
-                    <button>
-                      Lorem Ipsum is simply dummy text of the printing?
-                    </button>
-                  </div>
-                  <div className="faq__ans">
-                    <p>
-                      industry. Lorem Ipsum has been the industry&lsquo;s
-                      standard dummy text ever since the 1500s.
-                    </p>
-                  </div>
-                </div>
-                <div className="faq__content">
-                  <div className="faq__que">
-                    <button>
-                      Lorem Ipsum is simply dummy text of the printing?
-                    </button>
-                  </div>
-                  <div className="faq__ans">
-                    <p>
-                      industry. Lorem Ipsum has been the industry&lsquo;s
-                      standard dummy text ever since the 1500s.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <FaqComponent />
       {/* ==============faq end ============== */}
 
       {/* ==============client ============== */}
