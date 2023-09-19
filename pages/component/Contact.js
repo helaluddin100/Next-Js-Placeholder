@@ -11,7 +11,7 @@ function Contact() {
                 <p>
                   contact <span>me</span>
                 </p>
-                <h2>I'm always active to my mail account.</h2>
+                <h2>I&apos;m always active to my mail account.</h2>
               </div>
             </div>
           </div>

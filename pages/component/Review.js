@@ -14,7 +14,7 @@ function Review() {
                   clients <span>qoute</span>
                 </p>
                 <h2>
-                  I'm proud to received fantastic feedback from the clients
+                  I&apos;m proud to received fantastic feedback from the clients
                 </h2>
               </div>
             </div>
