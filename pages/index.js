@@ -7,6 +7,7 @@ import Review from "./component/Review";
 import Contact from "./component/Contact";
 import Counter from "./component/Counter";
 import FaqComponent from "./component/FaqComponent";
+import Resume from "./component/Resume";
 function Home() {
   return (
     <>
@@ -110,8 +111,9 @@ function Home() {
       </section>
 
       {/* ===========banner end============== */}
+      <Resume />
 
-      <section className="resume">
+      {/* <section className="resume">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -429,7 +431,7 @@ function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ============resume end================= */}
       {/* =========service start ============== */}

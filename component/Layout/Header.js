@@ -1,6 +1,47 @@
-import { useState } from "react";
 import Link from "next/link";
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+
 function Header() {
+  const [isNavbarFixed, setIsNavbarFixed] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsNavbarFixed(true);
+      } else {
+        setIsNavbarFixed(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // =================current page active link=============
+  const router = useRouter();
+
+  useEffect(() => {
+    const currentPath = router.asPath;
+
+    const cleanPath = currentPath.split("?")[0].split("#")[0];
+
+    const url = cleanPath === "" ? "index.html" : cleanPath;
+
+    document.querySelectorAll(".navbar__item").forEach((item) => {
+      const href = item.querySelector("a").getAttribute("href");
+
+      if (url === href) {
+        item.classList.add("active");
+      } else {
+        item.classList.remove("active");
+      }
+    });
+  }, [router.asPath]);
   return (
     <>
       {/* <div className="spinner__wrapper">
@@ -13,12 +54,14 @@ function Header() {
       <a className="scroll__top" href="#">
         <i className="fas fa-long-arrow-alt-up"></i>
       </a>
-      <nav className="navbar__part">
+      <nav className={`navbar__part ${isNavbarFixed ? "navbar-fixed" : ""}`}>
         <div className="container">
           <div className="navbar__content">
-            <a className="logo" href="index.html">
-              <img src="img/logo.png" alt="logo" />
-            </a>
+            <Link href={"/"}>
+              <a className="logo">
+                <img src="img/logo.png" alt="logo" />
+              </a>
+            </Link>
             <button className="navbar__toggle" type="button">
               <i className="fas fa-bars"></i>
             </button>
@@ -28,9 +71,9 @@ function Header() {
               </a>
               <ul className="navbar__list">
                 <li className="navbar__item">
-                  <a className="navbar__link" href="index.html">
-                    Home
-                  </a>
+                  <Link href={"/"}>
+                    <a className="navbar__link">Home</a>
+                  </Link>
                 </li>
                 <li className="navbar__item">
                   <a className="navbar__link" href="service.html">
@@ -54,7 +97,10 @@ function Header() {
                       </a>
                     </li>
                     <li>
-                      <a className="dropdown__link" href="protfolio-details.html">
+                      <a
+                        className="dropdown__link"
+                        href="protfolio-details.html"
+                      >
                         Portfolio Details
                       </a>
                     </li>
@@ -78,12 +124,18 @@ function Header() {
                       </a>
                     </li>
                     <li>
-                      <a className="dropdown__link" href="blog-grid-leftbar.html">
+                      <a
+                        className="dropdown__link"
+                        href="blog-grid-leftbar.html"
+                      >
                         blog grid leftbar
                       </a>
                     </li>
                     <li>
-                      <a className="dropdown__link" href="blog-grid-rightbar.html">
+                      <a
+                        className="dropdown__link"
+                        href="blog-grid-rightbar.html"
+                      >
                         blog grid rightbar
                       </a>
                     </li>

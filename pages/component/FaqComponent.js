@@ -45,23 +45,7 @@ function FaqComponent() {
           </div>
           <div className="row">
             <Faq data={data} />
-            {/* <div className="col-md-6 col-lg-6">
-              <div className="faq__main">
-                <div className="faq__content">
-                  <div className="faq__que">
-                    <button>
-                      Lorem Ipsum is simply dummy text of the printing?
-                    </button>
-                  </div>
-                  <div className="faq__ans">
-                    <p>
-                      industry. Lorem Ipsum has been the industry&lsquo;s
-                      standard dummy text ever since the 1500s.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div> */}
+            
           </div>
         </div>
       </section>
