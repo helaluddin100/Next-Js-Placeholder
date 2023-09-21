@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, A11y } from "swiper";
+import Link from "next/link";
 function Portfolio() {
+  const [portfolio, setPortfolio] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/api/portfolio")
+      .then((res) => res.json())
+      .then((result) => {
+        console.log(result);
+        setPortfolio(result);
+      });
+  }, []);
   return (
     <div>
       {/* ===============portfolio ================ */}
@@ -30,126 +41,25 @@ function Portfolio() {
                   }}
                   loop="true"
                 >
-                  <SwiperSlide>
-                    <div className="port__card">
-                      <div className="portfolio__img">
-                        <img
-                          src="img/protfolio-image/protfolio1.png"
-                          alt="port-1"
-                        />
-                      </div>
-                      <div className="portfolio__hover">
-                        <div className="protfolio__btn">
-                          <a className="btn btn__custome" href="#">
-                            live preview
-                          </a>
-                          <a className="btn btn__custome" href="#">
-                            view details
-                          </a>
+                  {portfolio.map((item) => (
+                    <SwiperSlide key={item}>
+                      <div className="port__card">
+                        <div className="portfolio__img">
+                          <img src={item.work_img} alt={item.title} />
+                        </div>
+                        <div className="portfolio__hover">
+                          <div className="protfolio__btn">
+                            <a className="btn btn__custome" href={item.url}>
+                              live preview
+                            </a>
+                            <a className="btn btn__custome" href="#">
+                              view details
+                            </a>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className="port__card">
-                      <div className="portfolio__img">
-                        <img
-                          src="img/protfolio-image/protfolio1.png"
-                          alt="port-1"
-                        />
-                      </div>
-                      <div className="portfolio__hover">
-                        <div className="protfolio__btn">
-                          <a className="btn btn__custome" href="#">
-                            live preview
-                          </a>
-                          <a className="btn btn__custome" href="#">
-                            view details
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className="port__card">
-                      <div className="portfolio__img">
-                        <img
-                          src="img/protfolio-image/protfolio1.png"
-                          alt="port-1"
-                        />
-                      </div>
-                      <div className="portfolio__hover">
-                        <div className="protfolio__btn">
-                          <a className="btn btn__custome" href="#">
-                            live preview
-                          </a>
-                          <a className="btn btn__custome" href="#">
-                            view details
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className="port__card">
-                      <div className="portfolio__img">
-                        <img
-                          src="img/protfolio-image/protfolio1.png"
-                          alt="port-1"
-                        />
-                      </div>
-                      <div className="portfolio__hover">
-                        <div className="protfolio__btn">
-                          <a className="btn btn__custome" href="#">
-                            live preview
-                          </a>
-                          <a className="btn btn__custome" href="#">
-                            view details
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className="port__card">
-                      <div className="portfolio__img">
-                        <img
-                          src="img/protfolio-image/protfolio1.png"
-                          alt="port-1"
-                        />
-                      </div>
-                      <div className="portfolio__hover">
-                        <div className="protfolio__btn">
-                          <a className="btn btn__custome" href="#">
-                            live preview
-                          </a>
-                          <a className="btn btn__custome" href="#">
-                            view details
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className="port__card">
-                      <div className="portfolio__img">
-                        <img
-                          src="img/protfolio-image/protfolio1.png"
-                          alt="port-1"
-                        />
-                      </div>
-                      <div className="portfolio__hover">
-                        <div className="protfolio__btn">
-                          <a className="btn btn__custome" href="#">
-                            live preview
-                          </a>
-                          <a className="btn btn__custome" href="#">
-                            view details
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </SwiperSlide>
+                    </SwiperSlide>
+                  ))}
                 </Swiper>
               </div>
             </div>
@@ -157,10 +67,12 @@ function Portfolio() {
           <div className="row">
             <div className="col-lg-12">
               <div className="protfolio__view__more">
-                <a className="btn btn__custome" href="#">
-                  <i className="far fa-eye"></i>
-                  <span>View more</span>
-                </a>
+                <Link href="/portfolio">
+                  <a className="btn btn__custome">
+                    <i className="far fa-eye"></i>
+                    <span>View more</span>
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

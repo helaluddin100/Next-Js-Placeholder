@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import AppLayout from "../component/Layout/Layout";
-import Image from "next/image";
 import Head from "next/head";
 import Portfolio from "./component/portfolio";
 import Review from "./component/Review";
@@ -8,6 +7,8 @@ import Contact from "./component/Contact";
 import Counter from "./component/Counter";
 import FaqComponent from "./component/FaqComponent";
 import Resume from "./component/Resume";
+import Link from "next/link";
+import Skill from "./component/Skill";
 function Home() {
   const [home, setHome] = useState([]);
 
@@ -184,274 +185,74 @@ function Home() {
       {/* ================service end ============= */}
 
       {/* =============coding start =============== */}
-      <section className="coding">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="section__heading coding__head">
-                <p>
-                  coding <span>structure</span>
-                </p>
-                <h2>How do I organize my coding file &amp; coding structure</h2>
+      {home.banner && (
+        <section className="coding">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="section__heading coding__head">
+                  <p>
+                    coding <span>structure</span>
+                  </p>
+                  <h2>
+                    How do I organize my coding file &amp; coding structure
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-lg-6">
+                <div className="coding__text">
+                  <h3>{home.coding.title}</h3>
+                  <p>{home.coding.description}</p>
+                </div>
+                <ul className="coding__list">
+                  <li>
+                    <span className="right__aro">
+                      <i className="fas fa-hand-point-right"></i>
+                    </span>
+                    <p>{home.coding.stap_1}</p>
+                  </li>
+                  <li>
+                    <span className="right__aro">
+                      <i className="fas fa-hand-point-right"></i>
+                    </span>
+                    <p>{home.coding.stap_2}</p>
+                  </li>
+                  <li>
+                    <span className="right__aro">
+                      <i className="fas fa-hand-point-right"></i>
+                    </span>
+                    <p>{home.coding.stap_3}</p>
+                  </li>
+                  <li>
+                    <span className="right__aro">
+                      <i className="fas fa-hand-point-right"></i>
+                    </span>
+                    <p>{home.coding.stap_4}</p>
+                  </li>
+                  <li>
+                    <span className="right__aro">
+                      <i className="fas fa-hand-point-right"></i>
+                    </span>
+                    <p>{home.coding.stap_5}</p>
+                  </li>
+                </ul>
+              </div>
+              <div className="col-lg-6">
+                <div className="coding__img">
+                  <img src={home.coding.image} alt={home.coding.title} />
+                </div>
               </div>
             </div>
           </div>
-          <div className="row">
-            <div className="col-lg-6">
-              <div className="coding__text">
-                <h3>
-                  Lorem Ipsum is simply dummy text{" "}
-                  <span>of the printing and typesetting</span>
-                </h3>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the
-                  industry&lsquo;s standard dummy text ever since the 1500s
-                </p>
-              </div>
-              <ul className="coding__list">
-                <li>
-                  <span className="right__aro">
-                    <i className="fas fa-hand-point-right"></i>
-                  </span>
-                  <p>Lorem Ipsum is simply dummy text of the printing </p>
-                </li>
-                <li>
-                  <span className="right__aro">
-                    <i className="fas fa-hand-point-right"></i>
-                  </span>
-                  <p>Lorem Ipsum is simply dummy text of the printing </p>
-                </li>
-                <li>
-                  <span className="right__aro">
-                    <i className="fas fa-hand-point-right"></i>
-                  </span>
-                  <p>Lorem Ipsum is simply dummy text of the printing </p>
-                </li>
-                <li>
-                  <span className="right__aro">
-                    <i className="fas fa-hand-point-right"></i>
-                  </span>
-                  <p>Lorem Ipsum is simply dummy text of the printing </p>
-                </li>
-                <li>
-                  <span className="right__aro">
-                    <i className="fas fa-hand-point-right"></i>
-                  </span>
-                  <p>Lorem Ipsum is simply dummy text of the printing </p>
-                </li>
-              </ul>
-            </div>
-            <div className="col-lg-6">
-              <div className="coding__img">
-                <img src="img/undraw_Working_oh83.svg" alt="coding" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* ====================coding end =============== */}
       <Portfolio />
       {/* ==============skill =============== */}
-      <section className="skills">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="section__heading skills__head">
-                <p>
-                  my <span>skills</span>
-                </p>
-                <h2>I&lsquo;m Expert in this web software</h2>
-              </div>
-            </div>
-          </div>
-          <div className="row skills__amin">
-            <div className="col-6 col-sm-4 col-lg-2">
-              <div className="skills__card">
-                <div className="skills__image">
-                  <img src="img/html.png" alt="html" />
-                </div>
-                <div className="skills__title">
-                  <p>html</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-6 col-sm-4 col-lg-2">
-              <div className="skills__card">
-                <div className="skills__image">
-                  <img src="img/css.png" alt="css" />
-                </div>
-                <div className="skills__title">
-                  <p>css</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-6 col-sm-4 col-lg-2">
-              <div className="skills__card">
-                <div className="skills__image">
-                  <img src="img/javascript.png" alt="javascript" />
-                </div>
-                <div className="skills__title">
-                  <p>javascript</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-6 col-sm-4 col-lg-2">
-              <div className="skills__card">
-                <div className="skills__image">
-                  <img src="img/bootstrap.png" alt="bootstrap" />
-                </div>
-                <div className="skills__title">
-                  <p>bootstrap</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-6 col-sm-4 col-lg-2">
-              <div className="skills__card">
-                <div className="skills__image">
-                  <img src="img/jquery.png" alt="jquery" />
-                </div>
-                <div className="skills__title">
-                  <p>jquery</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-6 col-sm-4 col-lg-2">
-              <div className="skills__card">
-                <div className="skills__image">
-                  <img src="img/sass.png" alt="sass" />
-                </div>
-                <div className="skills__title">
-                  <p>sass</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-6 col-sm-4 col-lg-2">
-              <div className="skills__card">
-                <div className="skills__image">
-                  <img src="img/wordpress.png" alt="wordpress" />
-                </div>
-                <div className="skills__title">
-                  <p>wordpress</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-6 col-sm-4 col-lg-2">
-              <div className="skills__card">
-                <div className="skills__image">
-                  <img src="img/react.png" alt="react" />
-                </div>
-                <div className="skills__title">
-                  <p>react</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-6 col-sm-4 col-lg-2">
-              <div className="skills__card">
-                <div className="skills__image">
-                  <img src="img/github.png" alt="github" />
-                </div>
-                <div className="skills__title">
-                  <p>github</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-6 col-sm-4 col-lg-2">
-              <div className="skills__card">
-                <div className="skills__image">
-                  <img src="img/vscode.png" alt="vscode" />
-                </div>
-                <div className="skills__title">
-                  <p>vscode</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-6 col-sm-4 col-lg-2">
-              <div className="skills__card">
-                <div className="skills__image">
-                  <img src="img/photoshop.png" alt="photoshop" />
-                </div>
-                <div className="skills__title">
-                  <p>photoshop</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-6 col-sm-4 col-lg-2">
-              <div className="skills__card">
-                <div className="skills__image">
-                  <img src="img/illustrator.png" alt="illustrator" />
-                </div>
-                <div className="skills__title">
-                  <p>illustrator</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-6 col-sm-4 col-lg-2">
-              <div className="skills__card">
-                <div className="skills__image">
-                  <img src="img/php.png" alt="php" />
-                </div>
-                <div className="skills__title">
-                  <p>PHP</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-6 col-sm-4 col-lg-2">
-              <div className="skills__card">
-                <div className="skills__image">
-                  <img src="img/laravel.png" alt="laravel" />
-                </div>
-                <div className="skills__title">
-                  <p>Laravel</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-6 col-sm-4 col-lg-2">
-              <div className="skills__card">
-                <div className="skills__image">
-                  <img src="img/paython.png" alt="paython" />
-                </div>
-                <div className="skills__title">
-                  <p>paython</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-6 col-sm-4 col-lg-2">
-              <div className="skills__card">
-                <div className="skills__image">
-                  <img src="img/java.png" alt="java" />
-                </div>
-                <div className="skills__title">
-                  <p>java</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-6 col-sm-4 col-lg-2">
-              <div className="skills__card">
-                <div className="skills__image">
-                  <img src="img/c.png" alt="c" />
-                </div>
-                <div className="skills__title">
-                  <p>c++</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-6 col-sm-4 col-lg-2">
-              <div className="skills__card">
-                <div className="skills__image">
-                  <img src="img/sql.png" alt="sql" />
-                </div>
-                <div className="skills__title">
-                  <p>sql</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Skill />
 
       {/* ======================skill end ================ */}
       {/* =============discussion start ============== */}
@@ -469,10 +270,12 @@ function Home() {
               </div>
               <div className="col-md-5 col-lg-4">
                 <div className="discuss__btn">
-                  <a className="btn btn__custome" href="#">
-                    <i className="fas fa-paper-plane"></i>
-                    <span>Get in Touch</span>
-                  </a>
+                  <Link href="/contact">
+                    <a className="btn btn__custome">
+                      <i className="fas fa-paper-plane"></i>
+                      <span>Get in Touch</span>
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>

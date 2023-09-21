@@ -1,4 +1,6 @@
-import React from "react";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
+
 import CountUp from "react-countup";
 
 function Counter() {
@@ -17,7 +19,7 @@ function Counter() {
                   />
                   <div className="counter__details">
                     <h3>
-                      <CountUp end={362} duration={2} separator="," />
+                      <CountUp end={362} duration={5} separator="," />
                     </h3>
                     <p>Project completed</p>
                   </div>
@@ -32,7 +34,7 @@ function Counter() {
                   />
                   <div className="counter__details">
                     <h3>
-                      <CountUp end={208} duration={2} separator="," />
+                      <CountUp end={208} duration={5} separator="," />
                     </h3>
                     <p>Satisfied Clients</p>
                   </div>
@@ -43,7 +45,7 @@ function Counter() {
                   <img src="img/rating.svg" className="counter__img" alt="" />
                   <div className="counter__details">
                     <h3>
-                      <CountUp end={97} duration={2} suffix="%" />
+                      <CountUp end={97} duration={5} suffix="%" />
                     </h3>
                     <p>Positive Feedback</p>
                   </div>
