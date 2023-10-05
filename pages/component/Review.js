@@ -42,7 +42,7 @@ function Review() {
                   loop="true"
                 >
                   {review.map((item) => (
-                    <SwiperSlide>
+                    <SwiperSlide key={item}>
                       <div className="client__card">
                         <i className="far fa-star"></i>
                         <div className="client__text">
