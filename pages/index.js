@@ -135,53 +135,57 @@ function Home() {
         </section>
       )}
       {/* ===========banner end============== */}
-      <Resume />
+      <div id="about">
+        <Resume />
+      </div>
 
       {/* ============resume end================= */}
       {/* =========service start ============== */}
-      {home.banner && (
-        <section className="service">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="section__heading service__head">
-                  <p>
-                    my <span>services</span>
-                  </p>
-                  <h2>I&lsquo;m very passionate under about this services</h2>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              {home.services && home.services.length > 0 ? (
-                home.services.map((item, index) => (
-                  <div className="col-md-6 col-lg-4" key={index}>
-                    <div className="service__card">
-                      <h3>{index}</h3>
-                      <span className={item.icon}></span>
-                      <i className={item.icon}></i>
-                      <h4>{item.title}</h4>
-                      <p>{item.meta_description}</p>
-                    </div>
+      <div id="service">
+        {home.banner && (
+          <section className="service">
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-12">
+                  <div className="section__heading service__head">
+                    <p>
+                      my <span>services</span>
+                    </p>
+                    <h2>I&lsquo;m very passionate under about this services</h2>
                   </div>
-                ))
-              ) : (
-                <p>No experience data available.</p>
-              )}
-            </div>
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="service__button">
-                  <a className="btn btn__custome" href="#">
-                    <i className="far fa-eye"></i>
-                    <span>show more</span>
-                  </a>
+                </div>
+              </div>
+              <div className="row">
+                {home.services && home.services.length > 0 ? (
+                  home.services.map((item, index) => (
+                    <div className="col-md-6 col-lg-4" key={index}>
+                      <div className="service__card">
+                        <h3>{index}</h3>
+                        <span className={item.icon}></span>
+                        <i className={item.icon}></i>
+                        <h4>{item.title}</h4>
+                        <p>{item.meta_description}</p>
+                      </div>
+                    </div>
+                  ))
+                ) : (
+                  <p>No experience data available.</p>
+                )}
+              </div>
+              <div className="row">
+                <div className="col-lg-12">
+                  <div className="service__button">
+                    <a className="btn btn__custome" href="#">
+                      <i className="far fa-eye"></i>
+                      <span>show more</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-      )}
+          </section>
+        )}
+      </div>
       {/* ================service end ============= */}
 
       {/* =============coding start =============== */}
@@ -250,7 +254,9 @@ function Home() {
       )}
 
       {/* ====================coding end =============== */}
-      <Portfolio />
+      <div id="portfolio">
+        <Portfolio />
+      </div>
       {/* ==============skill =============== */}
       <Skill />
 
@@ -291,7 +297,7 @@ function Home() {
       {/* ==============counter end ============== */}
 
       {/* ==========package start ============== */}
-      <section className="package">
+      {/* <section className="package">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -372,20 +378,24 @@ function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* =============package end ============== */}
 
       {/* =================faq============ */}
-      <FaqComponent />
+      <div id="faq">
+        <FaqComponent />
+      </div>
       {/* ==============faq end ============== */}
 
       {/* ==============client ============== */}
-      <Review />
+      <div id="review">
+        <Review />
+      </div>
       {/* =================client end ============== */}
 
       {/* ==============blog start ============== */}
-      <section className="blog">
+      {/* <section className="blog">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -560,12 +570,14 @@ function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ==============blog end ============== */}
 
       {/* ==============contact ================ */}
-      <Contact />
+      <div id="contact">
+        <Contact />
+      </div>
 
       {/* =================contact end ============== */}
     </>

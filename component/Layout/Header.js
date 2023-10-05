@@ -48,9 +48,9 @@ function Header() {
         <img src="img/728.gif" alt="" className="spiner" />
       </div> */}
 
-      <a className="night__mood">
+      {/* <a className="night__mood">
         <img src="img/gear.gif" alt="gear" />
-      </a>
+      </a> */}
       <a className="scroll__top" href="#">
         <i className="fas fa-long-arrow-alt-up"></i>
       </a>
@@ -76,106 +76,39 @@ function Header() {
                   </Link>
                 </li>
                 <li className="navbar__item">
-                  <a className="navbar__link" href="service.html">
+                  <a href="#about" className="navbar__link">
+                    About
+                  </a>
+                </li>
+                <li className="navbar__item">
+                  <a href="#service" className="navbar__link">
                     services
                   </a>
                 </li>
-                <li className="navbar__item">
-                  <a className="navbar__link" href="resume.html">
-                    resume
-                  </a>
-                </li>
+
                 <li className="navbar__dropdown">
-                  <a className="navbar__link dropdown__indicator" href="#">
-                    <span>portfolio</span>
-                    <i className="fas fa-chevron-down"></i>
+                  <a
+                    href="#portfolio"
+                    className="navbar__link dropdown__indicator"
+                  >
+                    portfolio
                   </a>
-                  <ul className="dropdown__list">
-                    <li>
-                      <a className="dropdown__link" href="protfolio-grid.html">
-                        Portfolio Grid
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="dropdown__link"
-                        href="protfolio-details.html"
-                      >
-                        Portfolio Details
-                      </a>
-                    </li>
-                  </ul>
                 </li>
 
-                <li className="navbar__item navbar__dropdown">
-                  <a className="navbar__link dropdown__indicator" href="#">
-                    <span>blogs</span>
-                    <i className="fas fa-chevron-down"></i>
+                {/* <li className="navbar__item navbar__dropdown">
+                  <a className="navbar__link dropdown__indicator" href="#blog">
+                    blogs
                   </a>
-                  <ul className="dropdown__list">
-                    <li>
-                      <a className="dropdown__link" href="blog-grid.html">
-                        Blog grid
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown__link" href="blog-details.html">
-                        blog details
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="dropdown__link"
-                        href="blog-grid-leftbar.html"
-                      >
-                        blog grid leftbar
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="dropdown__link"
-                        href="blog-grid-rightbar.html"
-                      >
-                        blog grid rightbar
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="dropdown__link"
-                        href="blog-details-leftbar.html"
-                      >
-                        blog details leftbar
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="dropdown__link"
-                        href="blog-details-rightbar.html"
-                      >
-                        blog details rightbar
-                      </a>
-                    </li>
-                  </ul>
-                </li>
+                </li> */}
                 <li className="navbar__item">
-                  <a className="navbar__link" href="contact.html">
+                  <a className="navbar__link" href="#contact">
                     contact
                   </a>
                 </li>
-                <li className="navbar__item">
-                  <a className="navbar__link" href="login.html">
-                    Login
-                  </a>
-                </li>
               </ul>
-              <form className="navbar__src">
-                <input type="text" placeholder="Search for quick..." />
-                <a href="#">
-                  <i className="fas fa-search"></i>
-                </a>
-              </form>
+
               <div className="hire__button">
-                <a className="btn btn__custome" href="#">
+                <a className="btn btn__custome" href="#contact">
                   <i className="fas fa-code"></i>
                   <span>hire me</span>
                 </a>

@@ -1,15 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, A11y } from "swiper";
 function Review() {
+  const [review, setReview] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/api/review")
+      .then((res) => res.json())
+      .then((result) => {
+        console.log(result);
+        setReview(result);
+      });
+  }, []);
   return (
     <div>
-      {" "}
-      <section className="claint">
+      <section className="client">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <div className="section__heading claint__head">
+              <div className="section__heading client__head">
                 <p>
                   clients <span>qoute</span>
                 </p>
@@ -32,78 +41,31 @@ function Review() {
                   }}
                   loop="true"
                 >
-                  <SwiperSlide>
-                    <div className="client__card">
-                      <i className="far fa-star"></i>
-                      <div className="client__text">
-                        <p>
-                          There are many variations of passages of Lorem Ipsum
-                          available, but the majority .
-                        </p>
+                  {review.map((item) => (
+                    <SwiperSlide>
+                      <div className="client__card">
+                        <i className="far fa-star"></i>
+                        <div className="client__text">
+                          <p
+                            title={item.message}
+                            dangerouslySetInnerHTML={{
+                              __html: item.message.substring(0, 100),
+                            }}
+                          ></p>
+                        </div>
+                        <div className="client__name">
+                          <h5>{item.name}</h5>
+                          <p>{item.area}</p>
+                          <a>
+                            <img
+                              src={`http://localhost:8000/${item.image}`}
+                              alt={item.name}
+                            />
+                          </a>
+                        </div>
                       </div>
-                      <div className="client__name">
-                        <h5>austin houston</h5>
-                        <p>new york, usa</p>
-                        <a href="#">
-                          <img src="img/testi-1.jpg" alt="testi-1" />
-                        </a>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className="client__card">
-                      <i className="far fa-star"></i>
-                      <div className="client__text">
-                        <p>
-                          There are many variations of passages of Lorem Ipsum
-                          available, but the majority .
-                        </p>
-                      </div>
-                      <div className="client__name">
-                        <h5>devid whigtmore</h5>
-                        <p>rome, Italy</p>
-                        <a href="#">
-                          <img src="img/testi-2.jpg" alt="testi-2" />
-                        </a>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className="client__card">
-                      <i className="far fa-star"></i>
-                      <div className="client__text">
-                        <p>
-                          There are many variations of passages of Lorem Ipsum
-                          available, but the majority .
-                        </p>
-                      </div>
-                      <div className="client__name">
-                        <h5>sane galonhop</h5>
-                        <p>dubai, uae</p>
-                        <a href="#">
-                          <img src="img/testi-3.jpg" alt="testi-3" />
-                        </a>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className="client__card">
-                      <i className="far fa-star"></i>
-                      <div className="client__text">
-                        <p>
-                          There are many variations of passages of Lorem Ipsum
-                          available, but the majority .
-                        </p>
-                      </div>
-                      <div className="client__name">
-                        <h5>martin howelling</h5>
-                        <p>toronto, canada</p>
-                        <a href="#">
-                          <img src="img/testi-4.jpg" alt="testi-4" />
-                        </a>
-                      </div>
-                    </div>
-                  </SwiperSlide>
+                    </SwiperSlide>
+                  ))}
                 </Swiper>
               </div>
             </div>

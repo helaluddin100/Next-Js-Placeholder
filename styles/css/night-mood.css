@@ -3884,7 +3884,7 @@ a.icon.icon-outline {
 
 
                   /*===============================================================
-                                    <!-- CLAINT STYLE START -->
+                                    <!-- client STYLE START -->
                   ==================================================================*/
 
 /*=====================================
@@ -3894,10 +3894,10 @@ a.icon.icon-outline {
   text-align: center;
   margin-top: 50px;
 }
-.claint__head h2 {
+.client__head h2 {
   width: 570px;
 }
-.claint {
+.client {
   padding: 113px 0px 0px;
 }
 .client__card {
@@ -3983,14 +3983,14 @@ a.icon.icon-outline {
   border: 3px solid #ffffff;
 }
 @media (max-width: 767px){
-  .claint__head h2 {
+  .client__head h2 {
       width: 100%;
   }
 }
 
                   
                   /*===============================================================
-                                    <!-- CLAINT STYLE END -->
+                                    <!-- client STYLE END -->
                   ==================================================================*/
 
 

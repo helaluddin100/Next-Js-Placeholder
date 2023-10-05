@@ -1,6 +1,51 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 function Contact() {
+  const [showPopup, setShowPopup] = useState(false);
+  const [inputField, setInputField] = useState({
+    name: "",
+    email: "",
+    message: "",
+    subject: "",
+  });
+
+  const inputsHandler = (e) => {
+    e.persist();
+    setInputField({
+      ...inputField,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const allInfoSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("name", inputField.name);
+    formData.append("email", inputField.email);
+    formData.append("message", inputField.message);
+    formData.append("subject", inputField.subject);
+
+    axios.post("http://localhost:8000/api/contact", formData).then((res) => {
+      if (res.data.status === 200) {
+        setShowPopup(true);
+        setInputField({
+          name: "",
+          email: "",
+          message: "",
+          subject: "",
+        });
+      } else {
+        alert(
+          "Maybe You not fill all the required fields. Please check again and fill all the required fields (*)."
+        );
+      }
+    });
+  };
+
+  const closePopup = () => {
+    setShowPopup(false);
+  };
   return (
     <div>
       <section className="contact">
@@ -25,9 +70,12 @@ function Contact() {
                 </div>
                 <div className="contact__text">
                   <h4>phone</h4>
-                  <p>
-                    (+880) 1792892198 <span>(+880) 1904786956</span>
-                  </p>
+                  <a href="tel:+8801792892198" className="contact-info-cta">
+                    (+880) 1792892198
+                  </a>
+                  <a href="tel:+8801904786956" className="contact-info-cta">
+                    (+880) 1904786956
+                  </a>
                 </div>
               </div>
             </div>
@@ -41,8 +89,18 @@ function Contact() {
                 <div className="contact__text">
                   <h4>email</h4>
                   <p>
-                    freelancerhelaluddin@gmail.com{" "}
-                    <span>helal96889@gmail.com</span>
+                    <a
+                      href="mailto:freelancerhelaluddin@gmail.com"
+                      className="contact-info-cta"
+                    >
+                      freelancerhelaluddin@gmail.com
+                    </a>
+                    <a
+                      href="mailto:zoomtechit@gmail.com"
+                      className="contact-info-cta"
+                    >
+                      zoomtechit@gmail.com
+                    </a>
                   </p>
                 </div>
               </div>
@@ -65,17 +123,44 @@ function Contact() {
           </div>
           <div className="row">
             <div className="col-md-6 col-lg-7">
-              <form className="contact__form">
+              <form
+                className="contact__form"
+                id="contactFormTwo"
+                onSubmit={allInfoSubmit}
+              >
                 <div className="input__field">
-                  <input type="text" placeholder="Name" />
-                  <input type="email" placeholder="Email" />
+                  <input
+                    type="text"
+                    name="name"
+                    onChange={inputsHandler}
+                    value={inputField.name}
+                    placeholder="Full Name"
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    onChange={inputsHandler}
+                    value={inputField.email}
+                    placeholder="Email"
+                  />
                 </div>
                 <div className="input__field">
-                  <input type="text" placeholder="Subject" />
-                  <input type="file" />
+                  <input
+                    type="text"
+                    name="subject"
+                    onChange={inputsHandler}
+                    value={inputField.subject}
+                    placeholder="Subject"
+                  />
                 </div>
                 <div className="input__field">
-                  <textarea placeholder="Message"></textarea>
+                  <textarea
+                    placeholder="Message"
+                    name="message"
+                    required
+                    onChange={inputsHandler}
+                    value={inputField.message}
+                  ></textarea>
                 </div>
                 <div className="contact__btn">
                   <button className="btn btn__custome" type="submit">
@@ -93,6 +178,22 @@ function Contact() {
           </div>
         </div>
       </section>
+
+      <div className={`popup-contact ${showPopup ? "active" : ""}`}>
+        <div className="popup__content">
+          <div className="popup__close" onClick={closePopup}>
+            <i className="fas fa-times"></i>
+          </div>
+          <div className="popup__text">
+            <h2>Thank you Sir</h2>
+            <p>
+              Thank you for reaching out to us! Your message has been received,
+              and we will respond to you as soon as possible. In the meantime,
+              feel free to explore more of our website.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -3813,7 +3813,7 @@ a.icon.icon-outline {
                 ==================================================================*/
 
 /*===============================================================
-                                  <!-- CLAINT STYLE START -->
+                                  <!-- client STYLE START -->
                 ==================================================================*/
 
 /*=====================================
@@ -3823,10 +3823,10 @@ a.icon.icon-outline {
   text-align: center;
   margin-top: 50px;
 }
-.claint__head h2 {
+.client__head h2 {
   width: 570px;
 }
-.claint {
+.client {
   padding: 113px 0px 0px;
 }
 .client__card {
@@ -3912,13 +3912,13 @@ a.icon.icon-outline {
   border: 3px solid #ffffff;
 }
 @media (max-width: 767px) {
-  .claint__head h2 {
+  .client__head h2 {
     width: 100%;
   }
 }
 
 /*===============================================================
-                                  <!-- CLAINT STYLE END -->
+                                  <!-- client STYLE END -->
                 ==================================================================*/
 
 /*===============================================================
@@ -4961,7 +4961,7 @@ a.icon.icon-outline {
 }
 
 .input__field input {
-  width: 297px;
+  width: 100%;
   margin: 10px;
   border: none;
   outline: none;
@@ -5880,4 +5880,45 @@ font-size: 0.8rem;
 }
 .navbar__link:hover:before {
   width: 100%;
+}
+
+.popup-contact {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0000003d;
+  z-index: 9;
+  backdrop-filter: blur(7px);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+.popup-contact.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup__content {
+  width: 450px;
+  position: relative;
+  background: #fff;
+  padding: 35px 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.popup__close {
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+.contact-info-cta {
+  display: block;
+  color: var(--heading-color);
 }
